@@ -26,3 +26,16 @@ export function isAdult(age){
         return "Minor"
     }
 }
+
+//PATH 
+export function process(x, y){
+    if (x > 0){
+        if (y > 0){
+            return "both x and y are positive"
+        }else{
+            return "x is positive" 
+        }
+    }else {
+        return "x is not positive"
+    }
+}
