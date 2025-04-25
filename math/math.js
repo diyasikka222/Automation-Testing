@@ -12,3 +12,8 @@ export function getTotalPrice(price, taxRate) { //
 export function getDiscountPrice(price, taxRate, discount){
     return getTotalPrice(price, taxRate) - (price * discount / 100)
 }
+
+// STATEMENT COBERAGE EXAMPLE
+export function greet(name){
+    return `Hi! ${name}`
+}
