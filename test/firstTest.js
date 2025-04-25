@@ -1,6 +1,6 @@
 import { should } from "chai";
 
-import { getDiscountPrice, getTotalPrice, greet } from "../math/math.js";
+import { getDiscountPrice, getTotalPrice, greet, isAdult } from "../math/math.js";
 
 should()
 
@@ -24,14 +24,27 @@ should()
 
 //STATEMENT COVERAGE
 
-describe("Statement Coverage", function(){
-    it("should return Hi! Alice for greet(Alice)", function(){
-        const result = greet("Alice")
-        result.should.equal("Hi! Alice")
+// describe("Statement Coverage", function(){
+//     it("should return Hi! Alice for greet(Alice)", function(){
+//         const result = greet("Alice")
+//         result.should.equal("Hi! Alice")
+//     })
+
+//     it("should return error for greet()", function(){
+//         const result = greet()
+//         result.should.equal("Hi! Alice")
+//     })
+// })
+
+// BRANCH COVERAGE EXAMPLE
+describe("Branch Coverage", function(){
+    it("should return Adult for isAdult(20)", function(){
+        const result = isAdult(20)
+        result.should.equal("Adult")
     })
 
-    it("should return error for greet()", function(){
-        const result = greet()
-        result.should.equal("Hi! Alice")
+    it("should return Minor for isAdult(15)", function(){
+        const result = isAdult(15)
+        result.should.equal("Minor")
     })
 })

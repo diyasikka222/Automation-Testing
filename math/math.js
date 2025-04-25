@@ -17,3 +17,12 @@ export function getDiscountPrice(price, taxRate, discount){
 export function greet(name){
     return `Hi! ${name}`
 }
+
+// BRANCH COVERAGE EXAMPLE
+export function isAdult(age){
+    if(age >= 18) {
+        return "Adult"
+    } else {
+        return "Minor"
+    }
+}
